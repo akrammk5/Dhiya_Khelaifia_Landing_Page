@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO -->
+    <title>Dhiya Eddine Khelaifia | Global Export Strategy & Technical Sales</title>
+    <meta name="title" content="Dhiya Eddine Khelaifia | Global Export Strategy & Technical Sales">
+    <meta name="description" content="Dhiya Eddine Khelaifia - Global Export Strategist & Technical Sales Leader. Bridging European manufacturing with MENA markets (Algeria, Tunisia, Morocco). Expert in GTM strategy, €1M+ pipeline generation, and mechanical engineering.">
+    <meta name="keywords" content="Export Strategy, Technical Sales, MENA Market, Dhiya Eddine Khelaifia, Sales Manager Poland, Agricultural Machinery Sales, International Business, Mechanical Engineer, Salesforce Expert, B2B Sales, Algeria, Tunisia, Morocco">
+    <meta name="author" content="Dhiya Eddine Khelaifia">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkedin.com/in/dhiya-eddine-khelaifia-83b672359/">
+    <meta property="og:title" content="Dhiya Eddine Khelaifia | Global Export Strategy">
+    <meta property="og:description" content="Bridging the gap between European manufacturing precision and MENA market demand. Driving €1M+ pipelines through technical fluency and regulatory mastery.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.linkedin.com/in/dhiya-eddine-khelaifia-83b672359/">
+    <meta property="twitter:title" content="Dhiya Eddine Khelaifia | Global Export Strategy">
+    <meta property="twitter:description" content="Global Export Strategist bridging EU & MENA. Specializing in technical value engineering and distributor network development.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#0F172A">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --bg-color: #F8FAFC; /* Slate-50 */
+            --navy-dark: #0F172A; /* Slate-900 */
+            --navy-primary: #1E3A8A; /* Blue-900 */
+            --blue-accent: #2563EB; /* Blue-600 */
+        }
+
+        html {
+            scroll-padding-top: 6rem; /* Offsets scroll for fixed header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        /* --- Components --- */
+
+        /* Glass Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #CBD5E1;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(to right bottom, rgba(15, 23, 42, 0.95), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Tab Interface */
+        .nav-pill {
+            transition: all 0.3s ease;
+        }
+        .nav-pill.active {
+            background-color: var(--navy-primary);
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Chart Area */
+        .chart-container {
+            position: relative;
+            height: 320px;
+            width: 100%;
+        }
+        
+        /* Map Visual Styling */
+        .map-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .pulse-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: pulse-ring 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+        }
+
+        /* Tech Stack Marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-slate-900 rounded flex items-center justify-center text-white font-heading font-bold text-xl shadow-lg">D</div>
+                <div>
+                    <div class="font-heading font-bold text-slate-900 leading-none">Dhiya Khelaifia</div>
+                    <div class="text-[10px] uppercase tracking-widest text-blue-700 font-semibold mt-1">Global Export Strategy</div>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#expertise" class="hover:text-blue-700 transition-colors py-2">Expertise</a>
+                <a href="#industries" class="hover:text-blue-700 transition-colors py-2">Industries</a>
+                <a href="#track-record" class="hover:text-blue-700 transition-colors py-2">Track Record</a>
+                <a href="mailto:dhiyakhea@gmail.com" class="px-6 py-2.5 bg-slate-900 text-white font-semibold rounded hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/20 hover:-translate-y-0.5">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Fixed Clipping with pt-32 pb-24) -->
+    <section class="hero-bg min-h-[90vh] flex items-center pt-32 pb-24 relative overflow-hidden">
+        <!-- Abstract Overlay -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Text Content -->
+            <div class="text-white space-y-8 animate-fade-in-up">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-900/50 border border-blue-700/50 backdrop-blur-sm">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                    </span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-100">Based in Poznan, Poland</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
+                    Engineering <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-500">Global Growth.</span>
+                </h1>
+                
+                <p class="text-lg text-slate-300 leading-relaxed max-w-xl border-l-4 border-blue-600 pl-6">
+                    I bridge the gap between European manufacturing precision and MENA market demand. A Mechanical Engineer and Sales Strategist delivering <b>€1M+ pipelines</b> through technical fluency and regulatory mastery.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <!-- DOWNLOAD RESUME CTA (Primary) -->
+                    <a href="https://drive.google.com/file/d/1ojsOdumK9hE2VS0w8s3u6Gwnqw1bsvlU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white text-slate-900 font-bold rounded hover:bg-blue-50 transition-all flex items-center gap-2 shadow-xl hover:-translate-y-1 group">
+                        Download Resume <i data-lucide="download" class="w-4 h-4 text-blue-700 group-hover:animate-bounce"></i>
+                    </a>
+                    
+                    <!-- GET IN TOUCH CTA (Secondary - Enhanced Contrast) -->
+                    <a href="mailto:dhiyakhea@gmail.com" class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold rounded hover:bg-white/20 transition-all flex items-center gap-2">
+                        Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Visual: The Export Bridge Map -->
+            <div class="hidden lg:block relative h-[500px] w-full bg-slate-900/40 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+                <!-- Map Background -->
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+                
+                <div class="absolute inset-0">
+                    <!-- Connector Lines (Visual SVG) -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <!-- Line Poland -> Maghreb -->
+                        <path d="M 45 25 Q 40 40 35 55" stroke="url(#grad1)" stroke-width="0.3" fill="none" stroke-dasharray="1,1" class="animate-pulse opacity-70"/>
+                        <!-- Line Poland -> Dubai -->
+                        <path d="M 45 25 Q 57 43 70 60" stroke="url(#grad2)" stroke-width="0.3" fill="none" stroke-dasharray="1,1" class="animate-pulse opacity-70"/>
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Nodes -->
+                    <div class="relative w-full h-full">
+                        <!-- Poland Node -->
+                        <div class="absolute top-[25%] left-[45%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+                            <div class="map-dot bg-blue-500">
+                                <div class="pulse-effect bg-blue-500"></div>
+                            </div>
+                            <div class="mt-4 bg-slate-900/90 backdrop-blur border border-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-xl whitespace-nowrap transform transition-transform group-hover:scale-110">
+                                <span class="text-blue-400 mr-1">●</span> Poznan, Poland
+                            </div>
+                        </div>
+
+                        <!-- Maghreb Node -->
+                        <div class="absolute top-[55%] left-[35%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+                             <div class="map-dot bg-amber-500">
+                                <div class="pulse-effect bg-amber-500"></div>
+                            </div>
+                            <div class="mt-4 bg-slate-900/90 backdrop-blur border border-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-xl whitespace-nowrap transform transition-transform group-hover:scale-110">
+                                <span class="text-amber-400 mr-1">●</span> Maghreb Region
+                            </div>
+                        </div>
+
+                        <!-- Dubai Node -->
+                        <div class="absolute top-[60%] left-[70%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10">
+                             <div class="map-dot bg-emerald-500">
+                                <div class="pulse-effect bg-emerald-500"></div>
+                            </div>
+                            <div class="mt-4 bg-slate-900/90 backdrop-blur border border-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold shadow-xl whitespace-nowrap transform transition-transform group-hover:scale-110">
+                                <span class="text-emerald-400 mr-1">●</span> Dubai, UAE
+                            </div>
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div class="absolute bottom-8 right-8 bg-slate-800/80 backdrop-blur border border-slate-600 p-4 rounded-xl shadow-2xl max-w-[200px] z-20 hover:bg-slate-800 transition-colors">
+                            <div class="flex items-start gap-3">
+                                <div class="p-2 bg-blue-600/20 rounded-lg text-blue-400 mt-1"><i data-lucide="trending-up" class="w-4 h-4"></i></div>
+                                <div>
+                                    <div class="text-2xl font-bold text-white leading-none">€1M+</div>
+                                    <div class="text-[10px] text-slate-400 uppercase font-bold mt-1 tracking-wider">Pipeline Value</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served -->
+    <section id="industries" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted Expertise Across Sectors</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center hover:border-blue-200 hover:-translate-y-1 transition-all duration-300">
+                    <i data-lucide="tractor" class="w-8 h-8 mx-auto text-amber-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Agri-Tech</h3>
+                    <p class="text-xs text-slate-500 mt-1">Machinery & Processing</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center hover:border-blue-200 hover:-translate-y-1 transition-all duration-300">
+                    <i data-lucide="signal" class="w-8 h-8 mx-auto text-blue-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Telecom (ICT)</h3>
+                    <p class="text-xs text-slate-500 mt-1">B2B Solutions</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center hover:border-blue-200 hover:-translate-y-1 transition-all duration-300">
+                    <i data-lucide="container" class="w-8 h-8 mx-auto text-emerald-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Logistics</h3>
+                    <p class="text-xs text-slate-500 mt-1">Last-Mile & Cross-Border</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center hover:border-blue-200 hover:-translate-y-1 transition-all duration-300">
+                    <i data-lucide="laptop" class="w-8 h-8 mx-auto text-indigo-600 mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Digital Commerce</h3>
+                    <p class="text-xs text-slate-500 mt-1">SaaS & Lead Gen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Services -->
+    <section id="expertise" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-blue-600 font-bold uppercase tracking-widest text-xs">Core Competencies</span>
+                <h2 class="text-4xl font-heading font-bold text-slate-900 mt-3 mb-6">More Than Sales. Complete Market Architecture.</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    I don't just "sell products." I build the technical, legal, and commercial infrastructure required for sustainable export growth in complex territories.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-xl bg-white group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="settings-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Technical Value Engineering</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Leveraging my <b>B.Sc. in Mechanical Engineering</b> to translate complex machinery specifications into ROI arguments for technical buyers.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Agricultural Machinery</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Post-Harvest Tech</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Automotive Systems</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-xl bg-white group border-blue-100 shadow-xl">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="container" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Export Compliance & Logistics</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Managing the end-to-end documentation lifecycle between EU (Poland) and Non-EU jurisdictions to eliminate customs friction.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Import/Export Permits</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Cross-Border Logistics</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Duty Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-xl bg-white group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-blue-700 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i data-lucide="users-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Distributor Network Development</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Identifying, vetting, and onboarding Tier-1 distributors. Using trilingual negotiation (Ar/Fr/En) to build lasting partnerships.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Contract Negotiation</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Partner Training</li>
+                        <li class="flex items-center gap-2 text-xs text-slate-500 font-medium"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Sales Enablement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Record (Interactive) -->
+    <section id="track-record" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-heading font-bold text-slate-900 text-center mb-12">Performance Timeline</h2>
+
+            <div class="bg-slate-50 rounded-2xl shadow-xl border border-slate-200 overflow-hidden flex flex-col lg:flex-row">
+                <!-- Sidebar Nav -->
+                <div class="w-full lg:w-1/4 bg-slate-50 border-r border-slate-200 p-2 lg:p-4 space-y-2 flex flex-row lg:flex-col overflow-x-auto">
+                    <button onclick="switchTab('kmk')" id="tab-kmk" class="nav-pill active w-full text-left px-4 py-4 rounded-lg flex flex-col group min-w-[200px]">
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70 mb-1 group-hover:opacity-100">Current Role</span>
+                        <span class="font-bold text-sm lg:text-base">KMK Agro</span>
+                        <span class="text-[10px] opacity-60">2025 - Present</span>
+                    </button>
+                    <button onclick="switchTab('etisalat')" id="tab-etisalat" class="nav-pill w-full text-left px-4 py-4 rounded-lg flex flex-col group min-w-[200px]">
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70 mb-1 group-hover:opacity-100">Telecom Leader</span>
+                        <span class="font-bold text-sm lg:text-base">Etisalat (e&)</span>
+                        <span class="text-[10px] opacity-60">2024 - 2025</span>
+                    </button>
+                    <button onclick="switchTab('consultant')" id="tab-consultant" class="nav-pill w-full text-left px-4 py-4 rounded-lg flex flex-col group min-w-[200px]">
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70 mb-1 group-hover:opacity-100">Independent</span>
+                        <span class="font-bold text-sm lg:text-base">Digital Strategy</span>
+                        <span class="text-[10px] opacity-60">2023 - 2025</span>
+                    </button>
+                    <button onclick="switchTab('zrexpress')" id="tab-zrexpress" class="nav-pill w-full text-left px-4 py-4 rounded-lg flex flex-col group min-w-[200px]">
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70 mb-1 group-hover:opacity-100">Logistics Ops</span>
+                        <span class="font-bold text-sm lg:text-base">ZREXPRESS</span>
+                        <span class="text-[10px] opacity-60">2021 - 2023</span>
+                    </button>
+                </div>
+
+                <!-- Content Area -->
+                <div class="w-full lg:w-3/4 p-8 lg:p-12 relative bg-white">
+                    <div id="content-area" class="transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-8 border-b border-slate-100 pb-6">
+                            <div>
+                                <h3 id="role-title" class="text-2xl font-bold text-slate-900">Area Sales Manager – North Africa</h3>
+                                <div class="flex items-center gap-2 mt-2 text-slate-500 text-sm">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i> <span id="role-location">Środa Wielkopolska, Poland</span>
+                                    <span class="mx-2">•</span>
+                                    <span id="role-date" class="font-medium text-blue-700">June 2025 – Present</span>
+                                </div>
+                            </div>
+                            <div id="role-logo" class="hidden md:flex h-12 w-12 bg-slate-100 rounded-lg items-center justify-center text-slate-400">
+                                <i data-lucide="briefcase" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900 uppercase mb-3">Executive Summary</h4>
+                                    <p id="role-desc" class="text-slate-600 leading-relaxed text-sm">
+                                        Leading the charge for Polish agricultural machinery in the Maghreb. Combining engineering knowledge with sales strategy to open new markets.
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900 uppercase mb-3">Key Achievements</h4>
+                                    <ul id="role-bullets" class="space-y-3">
+                                        <!-- JS Populated -->
+                                    </ul>
+                                </div>
+
+                                <div class="pt-4 flex flex-wrap gap-2" id="role-tags">
+                                    <!-- JS Populated -->
+                                </div>
+                            </div>
+
+                            <!-- Chart Side -->
+                            <div class="bg-slate-50 rounded-xl p-6 border border-slate-100 shadow-inner">
+                                <div class="flex items-center justify-between mb-6">
+                                    <h4 class="text-xs font-bold text-slate-500 uppercase">Performance Metric</h4>
+                                    <div class="px-2 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded" id="chart-tag">Pipeline Value</div>
+                                </div>
+                                <div class="chart-container">
+                                    <canvas id="experienceChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <section class="py-12 bg-slate-50 border-t border-slate-200 overflow-hidden">
+        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Digital & Technical Arsenal</p>
+        <div class="marquee-container relative">
+            <div class="marquee-content flex gap-12 items-center px-6">
+                <!-- Items (Duplicated for Loop) -->
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="cloud" class="text-blue-500"></i> Salesforce</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="database" class="text-orange-500"></i> HubSpot</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="search" class="text-green-500"></i> Google Ads</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="bar-chart" class="text-yellow-500"></i> Analytics</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="cpu" class="text-indigo-500"></i> Mechanical Eng.</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="globe" class="text-cyan-500"></i> SEO Ahrefs</div>
+                <!-- Duplicate -->
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="cloud" class="text-blue-500"></i> Salesforce</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="database" class="text-orange-500"></i> HubSpot</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="search" class="text-green-500"></i> Google Ads</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="bar-chart" class="text-yellow-500"></i> Analytics</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="cpu" class="text-indigo-500"></i> Mechanical Eng.</div>
+                <div class="flex items-center gap-2 font-bold text-xl text-slate-700 opacity-60"><i data-lucide="globe" class="text-cyan-500"></i> SEO Ahrefs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-slate-900 font-bold">D</div>
+                        <span class="font-heading font-bold text-xl">Dhiya Khelaifia</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        An expert in technical sales and export strategy. Helping European manufacturers unlock the potential of North African markets through engineering precision and cultural fluency.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-6">Connect</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="https://linkedin.com/in/dhiya-eddine-khelaifia-83b672359" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn</a></li>
+                        <li><a href="mailto:dhiyakhea@gmail.com" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> Email Me</a></li>
+                        <li><span class="flex items-center gap-2 cursor-default"><i data-lucide="phone" class="w-4 h-4"></i> +48 502 637 066</span></li>
+                        <li><a href="https://drive.google.com/file/d/1ojsOdumK9hE2VS0w8s3u6Gwnqw1bsvlU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4"></i> Download Resume</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-6">Expertise</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li>GTM Strategy</li>
+                        <li>Export Compliance</li>
+                        <li>Distributor Management</li>
+                        <li>Technical Sales</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Dhiya Eddine Khelaifia. All Rights Reserved.</p>
+                <p>Based in Poznan, Poland.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // --- Data ---
+        const data = {
+            kmk: {
+                title: "Area Sales Manager – North Africa",
+                location: "Środa Wielkopolska, Poland",
+                date: "June 2025 – Present",
+                desc: "Spearheading market entry for Polish machinery in Algeria, Tunisia, and Morocco. Combining technical engineering expertise with aggressive sales strategy.",
+                bullets: [
+                    "Generated <strong>€1M+ qualified pipeline</strong> in first 8 months.",
+                    "Built trilingual (Ar/Fr/En) digital ecosystem increasing leads by 35%.",
+                    "Managed end-to-end export compliance (EU to Non-EU)."
+                ],
+                tags: ["Salesforce", "Technical Specs", "Export Law", "Negotiation"],
+                chartType: 'line',
+                chartLabel: 'Pipeline Value (k€)',
+                chartData: [0, 200, 450, 600, 850, 1000],
+                chartLabels: ['Jun', 'Aug', 'Oct', 'Dec', 'Jan', 'Feb'],
+                color: '#2563EB' // Royal Blue
+            },
+            etisalat: {
+                title: "Sales Executive (B2B & B2C)",
+                location: "Dubai, UAE",
+                date: "Jan 2024 – Feb 2025",
+                desc: "Managed high-value corporate portfolios in a high-pressure global hub environment at Etisalat Headquarters.",
+                bullets: [
+                    "Hit <strong>120% of sales targets</strong> consistently at DXB flagship.",
+                    "Maintained 90% retention rate for 50+ HQ corporate clients.",
+                    "Mentored 5 juniors on relationship-based selling."
+                ],
+                tags: ["CRM", "Telecom ICT", "B2B Sales", "Client Retention"],
+                chartType: 'bar',
+                chartLabel: 'Target Achievement %',
+                chartData: [100, 110, 120, 115, 125, 120],
+                chartLabels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6'],
+                color: '#0F172A' // Navy
+            },
+            consultant: {
+                title: "Digital Strategy Consultant",
+                location: "Remote / International",
+                date: "Mar 2023 – Oct 2025",
+                desc: "Fractional growth services for international SMEs focusing on ROI and Branding.",
+                bullets: [
+                    "Managed €13.8k+ ad spend with <strong>20% ROI boost</strong>.",
+                    "Delivered 50+ branding projects for B2B clients.",
+                    "Implemented SEO strategies driving organic traffic."
+                ],
+                tags: ["Google Ads", "SEO", "Branding", "Data Analysis"],
+                chartType: 'line',
+                chartLabel: 'ROI Improvement %',
+                chartData: [5, 10, 12, 15, 18, 20],
+                chartLabels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6'],
+                color: '#475569' // Slate
+            },
+            zrexpress: {
+                title: "Operations Manager",
+                location: "UAE & Algeria",
+                date: "Sep 2021 – Feb 2023",
+                desc: "Orchestrated last-mile logistics for a 15-person fleet across 6 cities.",
+                bullets: [
+                    "Improved on-time delivery by <strong>20%</strong> via route optimization.",
+                    "Managed €100k+ monthly COD with 0% discrepancies.",
+                    "Boosted CSAT scores by 25%."
+                ],
+                tags: ["Supply Chain", "Excel Modeling", "Team Mgmt", "Logistics"],
+                chartType: 'line',
+                chartLabel: 'On-Time Delivery %',
+                chartData: [75, 78, 82, 88, 92, 95],
+                chartLabels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6'],
+                color: '#16A34A' // Green
+            }
+        };
+
+        let myChart = null;
+
+        function renderChart(config) {
+            const ctx = document.getElementById('experienceChart').getContext('2d');
+            if(myChart) myChart.destroy();
+
+            // Gradient for line charts
+            let background = config.color;
+            if (config.chartType === 'line') {
+                const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                gradient.addColorStop(0, hexToRgba(config.color, 0.2));
+                gradient.addColorStop(1, hexToRgba(config.color, 0.0));
+                background = gradient;
+            }
+
+            myChart = new Chart(ctx, {
+                type: config.chartType,
+                data: {
+                    labels: config.chartLabels,
+                    datasets: [{
+                        label: config.chartLabel,
+                        data: config.chartData,
+                        borderColor: config.color,
+                        backgroundColor: background,
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: config.chartType === 'line',
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: config.color,
+                        pointRadius: 4,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#F1F5F9' },
+                            ticks: { font: { family: "'Inter', sans-serif", size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: "'Inter', sans-serif", size: 10 } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Helper for colors
+        function hexToRgba(hex, alpha) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        function switchTab(key) {
+            const item = data[key];
+            const contentArea = document.getElementById('content-area');
+
+            // 1. Update Tabs
+            document.querySelectorAll('.nav-pill').forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-900', 'text-white', 'shadow-md');
+                btn.classList.add('hover:bg-slate-100');
+                // Reset internal text colors for inactive state
+                const title = btn.querySelector('span:nth-child(2)'); 
+                if(title) title.classList.remove('text-white');
+            });
+
+            const activeBtn = document.getElementById(`tab-${key}`);
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('hover:bg-slate-100');
+
+            // 2. Animate Content Swap
+            contentArea.style.opacity = '0';
+            
+            setTimeout(() => {
+                // Update Text
+                document.getElementById('role-title').textContent = item.title;
+                document.getElementById('role-location').textContent = item.location;
+                document.getElementById('role-date').textContent = item.date;
+                document.getElementById('role-desc').textContent = item.desc;
+                document.getElementById('chart-tag').textContent = item.chartLabel;
+                
+                // Bullets
+                const list = document.getElementById('role-bullets');
+                list.innerHTML = '';
+                item.bullets.forEach(b => {
+                    const li = document.createElement('li');
+                    li.className = "flex items-start gap-3 text-sm text-slate-700";
+                    li.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i> <span>${b}</span>`;
+                    list.appendChild(li);
+                });
+
+                // Tags
+                const tags = document.getElementById('role-tags');
+                tags.innerHTML = '';
+                item.tags.forEach(t => {
+                    const span = document.createElement('span');
+                    span.className = "px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium border border-slate-200";
+                    span.textContent = t;
+                    tags.appendChild(span);
+                });
+
+                lucide.createIcons();
+                renderChart(item);
+
+                contentArea.style.opacity = '1';
+            }, 200);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('kmk');
+        });
+
+    </script>
+</body>
+</html>
